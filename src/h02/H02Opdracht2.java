@@ -16,5 +16,4 @@ public class H02Opdracht2 extends Applet  {
     g.drawString("mahmoudi",50,60);
   }
 
-
 }
