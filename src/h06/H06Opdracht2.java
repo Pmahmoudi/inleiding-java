@@ -5,35 +5,28 @@ import java.applet.Applet;
 import java.awt.*;
 
 public class H06Opdracht2 extends Applet {
-    private int sec;
+
     private int min;
+    private int uur;
     private int dag;
     private  int jaar;
-    private int secinuur;
-    private int secindag;
-    private int secinjaar;
 
 
     @Override
     public void init() {
         super.init();
-        sec = 60;
         min = 60;
-        dag= 24;
-        jaar = 365;
-        secinuur = min * sec;
-        secindag= sec * min * dag;
-        secinjaar= sec * min *dag *jaar;
-
-
+        uur = min * 60;
+        dag= uur * 24;
+        jaar = dag * 365;
     }
 
     @Override
     public void paint(Graphics g) {
 
-        g.drawString("secounden in een uur is :" + secinuur,20,20);
-        g.drawString("secounden in een dag is :" + secindag,20,40);
-        g.drawString("secounden in een jaar is :" + secinjaar,20,60);
+        g.drawString("secounden in een uur is :" + uur,20,20);
+        g.drawString("secounden in een dag is :" + dag,20,40);
+        g.drawString("secounden in een jaar is :" + jaar,20,60);
 
     }
 }
