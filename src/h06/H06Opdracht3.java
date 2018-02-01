@@ -2,21 +2,22 @@ package h06;
 
 import java.applet.Applet;
 import java.awt.*;
+import java.util.Scanner;
 
 public class H06Opdracht3 extends Applet {
+    int uitkomst;
+    int nummer;
+    int numeren;
 
-    private int min;
-    private int plu;
-
-
-    @Override
     public void init() {
-        super.init();
+        nummer = 6;
+        numeren = 7;
+
+        uitkomst = -(nummer + numeren);
     }
 
-
-    @Override
     public void paint(Graphics g) {
-        super.paint(g);
+        g.drawString("De Uitkomst is :" + uitkomst, 20, 20);
     }
 }
+
