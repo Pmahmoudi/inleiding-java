@@ -2,7 +2,8 @@ package h08;
 
 import java.applet.Applet;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class H08Opdracht1 extends Applet {
 
@@ -15,21 +16,21 @@ public class H08Opdracht1 extends Applet {
     public void init()
     {
         tekst= "Druk op oke";
-        titel= new Label("recht is een tekstvak");
+        titel= new Label("Tekstvak");
         add(titel);
-        tekstvak= new TextField("vul hier wat in",30);
+        tekstvak= new TextField("vul hier in",30);
         add(tekstvak);
 
         knop= new Button();
         knop.setLabel("oke");
-        KnopListener2 kl2 = new KnopListener2();
-        knop.addActionListener(kl2);
+        KnopListenertwee p0= new KnopListenertwee();
+        knop.addActionListener(p0);
         add(knop);
 
         resetknop= new Button();
         resetknop.setLabel("reset");
-        KnopListener kl = new KnopListener();
-        resetknop.addActionListener( kl );
+        KnopListener p = new KnopListener();
+        resetknop.addActionListener( p );
         add(resetknop);
     }
     public void paint(Graphics g){
@@ -43,14 +44,12 @@ public class H08Opdracht1 extends Applet {
         }
     }
 
-    class KnopListener2 implements ActionListener {
+    class KnopListenertwee implements ActionListener {
         public void actionPerformed( ActionEvent e ) {
             tekst= tekstvak.getText();
             repaint();
         }
     }
 
-
-
-
 }
+
